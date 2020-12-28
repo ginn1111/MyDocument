@@ -1,0 +1,26 @@
+/app/build.gradle
+
+	android {
+    compileSdkVersion 30
+}
+
+  defaultConfig {
+        multiDexEnabled true
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.example.taxi_app"
+        minSdkVersion 21
+        targetSdkVersion 30
+}
+
+dependencies {
+	...
+    implementation 'androidx.multidex:multidex:2.0.1'
+	...
+}
+
+ gradle.properties
+
+android.enableDexingArtifactTransform=false
+
+ manifest.xml
+	android:usesCleartextTraffic="true"
